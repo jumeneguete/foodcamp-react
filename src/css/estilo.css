@@ -23,6 +23,7 @@ header {
 }
 
 header h1 {
+    color: #fff;
     font-size: 44px;
     font-weight: 400;
     padding-bottom: 5px;
