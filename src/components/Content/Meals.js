@@ -1,27 +1,26 @@
-export default function Meals() {
+export default function Meals(props) {
+    const { mealOptions, select} = props;
+
+
     return (
 
         <ul class="options meal-options">
-            <li class="feijoada" onclick="selectMeal('.feijoada', 'Feijoada', 32.9)">
-                <img src="imagens/feijoada.jpg" alt="feijoada" class="main-img" />
-                <div class="main">Feijoada</div>
-                <div class="more">Acompanha arroz, farofa, couve e laranja</div>
-                <div class="price"><span>R$ 32,90</span><ion-icon class="hide-icon" name="checkmark-circle"></ion-icon></div>
-            </li>
-
-            <li class="lasanha" onclick="selectMeal('.lasanha', 'Lasanha', 39.9)">
-                <img src="imagens/lasanha.jpg" alt="lasanha" class="main-img" />
-                <div class="main">Lasanha a bolonhesa</div>
-                <div class="more">Acompanha salada verde</div>
-                <div class="price"><span>R$ 39,90</span><ion-icon class="hide-icon" name="checkmark-circle"></ion-icon></div>
-            </li>
-
-            <li class="frango" onclick="selectMeal('.frango', 'Frango com Quiabo', 32.9)">
-                <img src="imagens/frango.jpg" alt="frango com quiabo" class="main-img" />
-                <div class="main">Frango com quiabo</div>
-                <div class="more">Acompanha polenta cremosa e farofa</div>
-                <div class="price"><span>R$ 32,90</span><ion-icon class="hide-icon" name="checkmark-circle"></ion-icon></div>
-            </li>
+            {
+                mealOptions.map((m,i) => (
+                    <li class={m.selected ? "selected" : ""} onClick={() => select(i)}>
+                        <img src={m.image} alt={m.name} class="main-img" />
+                        <div class="main">{m.name}</div>
+                        <div class="more">{m.description}</div>
+                        <div class="price"><span>R$ {m.price}</span>
+                            <div class={`counter ${m.selected ? "counterselected" : ""}`}>
+                                <button class="minus">-</button>
+                                <span>0</span>
+                                <button class="plus">+</button>
+                            </div>
+                        </div>
+                    </li>
+                ))
+            }
         </ul>
     );
 }
