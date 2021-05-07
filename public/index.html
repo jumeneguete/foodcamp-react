@@ -1,12 +1,119 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div class="root"></div>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>FoodCamp</title>
+</head>
+<body>
+    <header>
+        <h1>FoodCamp</h1>
+        <h2>Sua comida em 6 minutos</h2>
+    </header>
+
+    <div class="content">
+        <h1>Primeiro, seu prato</h1>
+
+        <ul class="options meal-options">
+            <li class="feijoada" onclick="selectMeal('.feijoada', 'Feijoada', 32.9)">
+               <img src="imagens/feijoada.jpg" alt="feijoada" class="main-img">
+               <div class="main">Feijoada</div> 
+               <div class="more">Acompanha arroz, farofa, couve e laranja</div>
+               <div class="price"><span>R&dollar; 32,90</span><ion-icon class="hide-icon" name="checkmark-circle"></ion-icon></div>
+            </li>
+
+            <li class="lasanha" onclick="selectMeal('.lasanha', 'Lasanha', 39.9)">
+                <img src="imagens/lasanha.jpg" alt="lasanha" class="main-img">
+                <div class="main">Lasanha a bolonhesa</div> 
+                <div class="more">Acompanha salada verde</div>
+                <div class="price"><span>R&dollar; 39,90</span><ion-icon class="hide-icon" name="checkmark-circle"></ion-icon></div>
+             </li>
+
+             <li class="frango" onclick="selectMeal('.frango', 'Frango com Quiabo', 32.9)">
+                <img src="imagens/frango.jpg" alt="frango com quiabo" class="main-img">
+                <div class="main">Frango com quiabo</div> 
+                <div class="more">Acompanha polenta cremosa e farofa</div>
+                <div class="price"><span>R&dollar; 32,90</span><ion-icon class="hide-icon" name="checkmark-circle"></ion-icon></div>
+             </li>
+        </ul>
+
+        <h1>Agora, sua bebida</h1>
+
+        <ul class="options drink-options">
+            <li class="coca" onclick="selectDrink('.coca', 'Coca-cola 350mL', 5.9)">
+               <img src="imagens/coca.jpg" alt="coca-cola" class="main-img">
+               <div class="main">Coca-cola</div> 
+               <div class="more">Lata 350mL</div>
+               <div class="price"><span>R&dollar; 5,90</span><ion-icon class="hide-icon" name="checkmark-circle"></ion-icon></div>
+            </li>
+
+            <li class="mate" onclick="selectDrink('.mate', 'Mate Leão 300mL', 4.9)">
+                <img src="imagens/mate.jpg" alt="mate leão copo" class="main-img">
+                <div class="main">Mate Leão</div> 
+                <div class="more">Copo 300mL</div>
+                <div class="price"><span>R&dollar; 4,90</span><ion-icon class="hide-icon" name="checkmark-circle"></ion-icon></div>
+             </li>
+
+             <li class="agua" onclick="selectDrink('.agua', 'h2o 500 mL', 6.9)">
+                <img src="imagens/h20.jpg" alt="H2O" class="main-img">
+                <div class="main">H2O</div> 
+                <div class="more">Garrafa 500mL</div>
+                <div class="price"><span>R&dollar; 6,90</span><ion-icon class="hide-icon" name="checkmark-circle"></ion-icon></div>
+             </li>
+        </ul>
+
+        <h1>Por fim, sua sobremesa</h1>
+
+        <ul class="options dessert-options">
+            <li class="pave" onclick="selectDessert('.pave', 'Pavê de Bis', 8.9)">
+               <img src="imagens/pave.jpg" alt="pavê de bis" class="main-img">
+               <div class="main">Pavê de Bis</div> 
+               <div class="more">Pote de 250mL</div>
+               <div class="price"><span>R&dollar; 8,90</span><ion-icon class="hide-icon" name="checkmark-circle"></ion-icon></div>
+            </li>
+
+            <li class="torta" onclick="selectDessert('.torta', 'Torta de Limão', 8.9)">
+                <img src="imagens/torta.jpg" alt="fatia de torta de limão" class="main-img">
+                <div class="main">Torta de Limão</div> 
+                <div class="more">Uma fatia</div>
+                <div class="price"><span>R&dollar; 8,90</span><ion-icon class="hide-icon" name="checkmark-circle"></ion-icon></div>
+             </li>
+
+             <li class="brigadeiro" onclick="selectDessert('.brigadeiro', 'Brigadeiro', 2.9)">
+                <img src="imagens/brigadeiro.jpg" alt="brigadeiro" class="main-img">
+                <div class="main">Brigadeiro</div> 
+                <div class="more">Uma unidade</div>
+                <div class="price"><span>R&dollar; 2,90</span><ion-icon class="hide-icon" name="checkmark-circle"></ion-icon></div>
+             </li>
+        </ul>
+    </div>
+
+    <footer>
+        <button onclick="confirmationBonus()">Selecione os 3 itens <br> 
+            para fechar o pedido</button>
+    </footer>
+
+    <div class="confirmation-screen hide-confirmation">
+        <div class="confirmation-box">
+            <p class="bold">Confirme seu pedido</p>
+            <div class="conf-itens conf-meal"><span>Frango</span> <span>4.90</span></div>
+            <div class="conf-itens conf-drink"><span>Frango</span> <span>4.90</span></div>
+            <div class="conf-itens conf-dessert"><span>Frango</span> <span>4.90</span></div>
+            <div class="conf-itens bold conf-total"><span>TOTAL</span> <span>R&dollar;4.90</span></div>
+        
+
+            <button onclick="messageBonus()">Tudo certo, pode pedir!</button>
+            <div onclick="back()" class="bold">Cancelar</div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="script.js"></script>
+
+</body>
 </html>
