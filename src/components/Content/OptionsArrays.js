@@ -65,7 +65,7 @@ const dessertOptions = [
     amount: 0
 }, {
     image: "imagens/brigadeiro.jpg",
-    name: "H2BrigadeiroO",
+    name: "Brigadeiro",
     description: "Uma unidade",
     price: "2,90",
     selected: false,

@@ -10,7 +10,8 @@ export default function Meals(props) {
         event.stopPropagation();
         if (counter>0){
             mealOptions[i].amount -= 1;
-            setCounter(mealOptions[i].amount) 
+            setCounter(mealOptions[i].amount);
+            setMeal([...mealOptions]);  
         } else if (counter===0){
             mealOptions[i].selected = false;
             setMeal([...mealOptions]);  
@@ -20,7 +21,8 @@ export default function Meals(props) {
     function addItem(event, i){
        event.stopPropagation();
         mealOptions[i].amount += 1;
-        setCounter(mealOptions[i].amount) 
+        setCounter(mealOptions[i].amount);
+        setMeal([...mealOptions]);   
     }
    
     return (
