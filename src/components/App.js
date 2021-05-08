@@ -9,11 +9,8 @@ export default function App(){
         <>
         <Header />
 
-        <div class="content">
-            <Content />
-        </div>
-
-        <Footer />
+        <Content />
+        
 
         <div class="confirmation-screen hide-confirmation">
             <div class="confirmation-box">

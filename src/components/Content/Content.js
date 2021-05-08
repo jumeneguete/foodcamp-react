@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../Footer";
 import Dessert from "./Dessert"
 import Drinks from "./Drinks"
 import Meals from "./Meals"
@@ -32,7 +33,7 @@ export default function Content() {
         ]
     );
 
-    const [drink, setDrink] = React.useState (
+    const [drink, setDrink] = React.useState(
         [
             {
                 image: "imagens/coca.jpg",
@@ -58,7 +59,7 @@ export default function Content() {
             }
         ]
     );
-    
+
 
     const [dessert, setDessert] = React.useState(
         [
@@ -86,63 +87,68 @@ export default function Content() {
             }
         ]
     );
-   
 
-    function selectMeal(i){
-        
+
+    function selectMeal(i) {
+
         if (meal[i].selected) {
-            meal[i].selected =false;
+            meal[i].selected = false;
             meal[i].amount = 0;
         } else {
-            meal[i].selected =true;
+            meal[i].selected = true;
             meal[i].amount = 1;
         }
-  
-        setMeal([...meal])      
+
+        setMeal([...meal])
     }
 
-    function selectDrink(i){
-        
+    function selectDrink(i) {
+
         if (drink[i].selected) {
-            drink[i].selected =false;
+            drink[i].selected = false;
             drink[i].amount = 0;
         } else {
-            drink[i].selected =true;
+            drink[i].selected = true;
             drink[i].amount = 1;
         }
-  
-        setDrink([...drink])      
+
+        setDrink([...drink])
     }
 
-    function selectDessert(i){
-        
+    function selectDessert(i) {
+
         if (dessert[i].selected) {
-            dessert[i].selected =false;
+            dessert[i].selected = false;
             dessert[i].amount = 0;
         } else {
-            dessert[i].selected =true;
+            dessert[i].selected = true;
             dessert[i].amount = 1;
         }
-  
-        setDessert([...dessert])      
+
+        setDessert([...dessert])
     }
 
-  
+
 
 
     return (
         <>
-            <h1>Primeiro, seu prato</h1>
- 
-            <Meals mealOptions={meal} selectMeal={selectMeal} setMeal={setMeal}/>
+            <div class="content">
+                <h1>Primeiro, seu prato</h1>
 
-            <h1>Agora, sua bebida</h1>
+                <Meals mealOptions={meal} selectMeal={selectMeal} setMeal={setMeal} />
 
-            <Drinks drink={drink} selectDrink={selectDrink} setDrink={setDrink}/>
+                <h1>Agora, sua bebida</h1>
 
-            <h1>Por fim, sua sobremesa</h1>
+                <Drinks drink={drink} selectDrink={selectDrink} setDrink={setDrink} />
 
-            <Dessert dessert={dessert} selectDessert={selectDessert} setDessert={setDessert} />
+                <h1>Por fim, sua sobremesa</h1>
+
+                <Dessert dessert={dessert} selectDessert={selectDessert} setDessert={setDessert} />
+            </div>
+
+            <Footer meal={meal} drink={drink} dessert={dessert} />
+
         </>
     );
 }
