@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+<h1 align="center">🍝 FoodCamp</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+FoodCamp is a very special restaurant that delivers your order in 6 minutes!! <br/>
+To to this, they only accept an specific type of order: meal + drink + dessert combos. <br>
+The application allows users to easily pick up a combo, and then send the order to the restaurant WhastApp. <br>
+Easy Peasy!
 
-## Available Scripts
+<p align="center"><img width="600px" src="/assets/foodcamp.gif" /></p>
 
-In the project directory, you can run:
 
-### `npm start`
+### 🔹🔹About
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This is a mobile web application where users can order a food combo and send the order to the restaurant WhatsApp. Below are the implemented features:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Home page where users can choose meals, drinks and desserts;
+- WhatsApp page review with an automatic message describing the selectes items and the total to be paid;<br>
+  _Business rule:_ Users have to choose at least one item per category. 
 
-### `npm test`
+### 🔹🔹Technologies
+- React.js
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🔹🔹Disclaimer
+This was my very first project using ReactJS framework. I was not very familiar with none of ReactJs several possibilities and my previous reference was Vanilla Javasript only. <br>
+There is no use of API in this project, that is why you will find all the items hardcoded in arrays. <br><br>
+I am very proud of producing this application while learning ReactJS.<br>
+Sure there are a lot of room for improvement on this project, and I may be doing it in a new repository, but this one will be kept as a reference to me. <br>
+Hope it helps some begginer! <br> <br>
 
-### `npm run build`
+This project was previously implemented using only vanilla Javascrip, you can check this repository out here: https://github.com/jumeneguete/projeto-foodcamp
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 🔹🔹How to run
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Clone this repository
+2. Install dependencies
+```bash
+npm i
+```
+3. Run the front-end with
+```bash
+npm start
+```
+4. You can optionally build the project running
+```bash
+npm run build
+```
+5. Finally access http://localhost:3000 on your favorite browser.
