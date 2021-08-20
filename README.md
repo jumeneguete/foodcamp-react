@@ -5,7 +5,7 @@ To to this, they only accept an specific type of order: meal + drink + dessert c
 The application allows users to easily pick up a combo, and then send the order to the restaurant WhastApp. <br>
 Easy Peasy!
 
-<p align="center"><img width="600px" src="/assets/foodcamp.gif" /></p>
+<p align="center"><img width="300px" src="/assets/foodcamp.gif" /></p>
 
 
 ### 🔹🔹About
