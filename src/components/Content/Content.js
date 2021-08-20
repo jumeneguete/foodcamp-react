@@ -107,7 +107,7 @@ export default function Content() {
         \n\ - Sobremesa:\n${dessertString} 
         \n\Total: R$ ${total.toFixed(2).replace(".",",")}`;
         finalMessage = encodeURIComponent(finalMessage);
-        let whatsappLink = "'https://wa.me/5521999989398?text="+ finalMessage + "'";
+        let whatsappLink = "https://wa.me/5521999999999?text="+ finalMessage;
         
         return (whatsappLink);
     }
